@@ -1,11 +1,11 @@
-# TF Pose Rebroadcaster
+# tf_pose_rebroadcaster
 
 ROS package for rebroadcasting transforms in the TF tree as PoseStamped.
 
 ## Nodes
 
-* **broadcast_pose** - broadcasts the tf as a PoseStamped
-* **broadcast_point** - broadcasts only the origin of the tf as a PointStamped
+* `broadcast_pose` - broadcasts the tf as a PoseStamped
+* `broadcast_point` - broadcasts only the origin of the tf as a PointStamped
 
 ### Parameters
 
