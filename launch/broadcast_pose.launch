@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    
+    <arg name="tf_parent" default="/base_link"/>
+    <arg name="tf_child" default="/extension"/>
+    <arg name="output_topic" default="/extension_pose"/>
+
+    <node pkg="tf_pose_rebroadcaster" type="broadcast_pose" name="pose_rebroadcaster" output="screen" respawn="false">
+        <param name="tf_parent" value="$(arg tf_parent)" /> <!-- lookup transform from this frame ... -->
+        <param name="tf_child" value="$(arg tf_child)" /> <!-- ... to this frame ... -->
+        <param name="output_topic" value="$(arg output_topic)" /> <!-- ... and replublish as a pose on this topic -->
+    </node>
+    
+</launch>
